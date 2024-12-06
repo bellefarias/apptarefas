@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Contador de Tarefas</h1>
+        
+        <!-- Formulário para adicionar tarefas -->
+        <div class="form-container">
+            <input type="text" id="tituloTarefa" placeholder="Título da tarefa" required>
+            <select id="prioridadeTarefa">
+                <option value="alta">Alta Prioridade</option>
+                <option value="media">Média Prioridade</option>
+                <option value="baixa">Baixa Prioridade</option>
+            </select>
+            <input type="datetime-local" id="dataTarefa">
+            <button onclick="adicionarTarefa()">Adicionar Tarefa</button>
+        </div>
+
+        <div class="button-container">
+            <button onclick="listarTarefasPendentes()">Listar Pendentes</button>
+            <button onclick="listarTarefasConcluidas()">Listar Concluídas</button>
+            <button onclick="organizarPorPrioridade()">Organizar por Prioridade</button>
+        </div>
+
+        <div id="tarefasContainer">
+            <h2>Tarefas</h2>
+            <ul id="listaTarefas"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
